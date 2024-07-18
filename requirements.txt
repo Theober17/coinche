@@ -1,1 +1,4 @@
 ultralytics
+PIL
+streamlit
+io
