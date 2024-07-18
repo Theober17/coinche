@@ -1,16 +1,10 @@
-from ultralytics import solutions
-solutions.inference()
-
 from ultralytics import YOLO
-from PIL import Image
-import streamlit as st
-import io
 
 model = YOLO("yolov8n.pt")
 
 st.title("Detection d'objets")
 
-picture = st.camera_input ("Take a picture")
+picture = st.camera_input("Take a picture")
 
 if picture :
     image = Image.open(picture )
