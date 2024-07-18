@@ -1,3 +1,6 @@
+from ultralytics import solutions
+solutions.inference()
+
 from ultralytics import YOLO
 from PIL import Image
 import streamlit as st
