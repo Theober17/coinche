@@ -3,7 +3,7 @@ from PIL import Image
 import streamlit as st
 import io
 
-model = YOLO("yolo_trained.pt")
+model = YOLO("yolov8n.pt")
 
 st.title("Detection d'objets")
 
