@@ -1,4 +1,4 @@
-!pip install ultralytics*
+!pip install ultralytics
 
 from ultralytics import YOLO
 from PIL import Image
