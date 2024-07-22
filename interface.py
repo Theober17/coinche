@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import streamlit as st
 from PIL import Image
 
-model = YOLO("yolov8n.pt")
+model = YOLO("yolo_trained.pt")
 
 st.title("Detection d'objets")
 
