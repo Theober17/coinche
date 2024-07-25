@@ -4,7 +4,7 @@ from PIL import Image
 
 model = YOLO("best.pt")
 
-st.title("Detection d'objets")
+st.title("Detection de cartes")
 
 picture = st.camera_input("Take a picture")
 
