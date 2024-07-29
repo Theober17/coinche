@@ -1,26 +1,26 @@
-from ultralytics import YOLO
 import streamlit as st
-from PIL import Image
 
-model = YOLO("best.pt")
+col1, col2, col3 = st.columns(3)
 
-st.title("Detection de cartes")
+with col2:
+    st.image("logo_coinche.png")
 
-uploaded_files = st.file_uploader(
-    "Choose a CSV file", accept_multiple_files=True
-)
+col1, col2, col3 = st.columns(3)
 
-for uploaded_file in uploaded_files:
-    bytes_data = uploaded_file.read()
-    st.write("filename:", uploaded_file.name)
-    st.write(bytes_data)
+with col1:
+    points_partie = st.number_input("Nombre de points :", min_value=500, max_value=5000, step = 500)
+
+with col2:
+    st.write('Equipe 1 :')
+    Joueur1 = st.text_input("Joueur 1", "😎")
+    Joueur2 = st.text_input("Joueur 2", "😁")
+
+with col3:
+    st.write('Equipe 2 :')
+    Joueur3 = st.text_input("Joueur 3", "🫡")
+    Joueur4 = st.text_input("Joueur 4", "🤑")
     
-picture = st.camera_input("Take a picture")
 
-if picture :
-    image = Image.open(picture)
-    results = model(image)
-    result_image = results[0].plot()
-    result_image_pil = Image.fromarray(result_image)
-    st.image(result_image_pil, caption='Resultat de la detection', channels="BGR")
-    
+
+if Joueur1 and Joueur2 and Joueur3 and Joueur4 :
+    st.page_link("pages/jeu.py", label="Accéder au Jeux !", icon="♣️")
