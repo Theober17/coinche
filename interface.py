@@ -23,4 +23,4 @@ with col3:
 
 
 if Joueur1 and Joueur2 and Joueur3 and Joueur4 :
-    st.page_link("pages/jeu.py", label="Accéder au Jeux !", icon="♣️")
+    st.page_link("jeu.py", label="Accéder au Jeux !", icon="♣️")
