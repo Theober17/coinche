@@ -267,7 +267,7 @@ with formulaire_pli:
         st.session_state.is_surcoinche = st.checkbox("Sur-Coinché&nbsp;&nbsp;🔥🔥")
 
     uploaded_file = st.file_uploader(
-        "Photo des plis de la défence 🛡️", type="jpg", key=f"uploader_{st.session_state.uploader_key}"
+        "Photo des plis de la défence 🛡️", key=f"uploader_{st.session_state.uploader_key}"
     )
 
     #submitted = st.button("Charger la photo", use_container_width=True)
