@@ -53,7 +53,7 @@ annonces_points = {
     'Carré':100,
     'Cent':100,
     'Carré de 9':150,
-    'Carré de Valet':200
+    'Carré de Valets':200
 }
 
 if "uploader_key" not in st.session_state:
