@@ -258,8 +258,13 @@ with formulaire_pli:
         key=f"annonce_defence_{st.session_state.annonce_def_key}"
     )
 
-    st.session_state.is_Capot = st.checkbox("Capot ?")
-    st.session_state.is_General = st.checkbox("Générale ?")
+    col1_, col2_ = st.columns(2)
+    with col1_ :
+        st.session_state.is_Capot = st.checkbox("Capot")
+        st.session_state.is_General = st.checkbox("Générale")
+    with col2_ :
+        st.session_state.is_coinche = st.checkbox("Coinché&nbsp;&nbsp;🔥")
+        st.session_state.is_surcoinche = st.checkbox("Sur-Coinché&nbsp;&nbsp;🔥🔥")
 
     uploaded_file = st.file_uploader(
         "Photo des plis de la défence 🛡️", type="jpg", key=f"uploader_{st.session_state.uploader_key}"
@@ -298,6 +303,14 @@ with formulaire_pli:
         result_image_pil = Image.fromarray(result_image_bgr)
 
         st.image(result_image_pil, caption="Detection des cartes par l'IA")
+
+        if st.session_state.is_coinche : 
+            st.session_state.points_attaque_plis = st.session_state.points_attaque_plis*2
+            st.session_state.points_defence_plis = st.session_state.points_defence_plis*2
+        
+        if st.session_state.is_surcoinche : 
+            st.session_state.points_attaque_plis = st.session_state.points_attaque_plis*4
+            st.session_state.points_defence_plis = st.session_state.points_defence_plis*4
 
         if st.session_state.is_fait is True :
             st.success(f"L'attaque de {st.session_state.equipe_attaque} réussi pour {st.session_state.points_attaque_plis} points", icon="⚔️")
