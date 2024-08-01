@@ -31,7 +31,7 @@ def main():
 
         jouer = st.button("♣️&nbsp;&nbsp;&nbsp;&nbsp;Jouer&nbsp;&nbsp;&nbsp;&nbsp;♠️", use_container_width = True)
         if jouer : 
-            st.switch_page("/pages/Jeu.py")
+            st.switch_page("theober17/coinche/main/pages/Jeu.py")
 
     
 
