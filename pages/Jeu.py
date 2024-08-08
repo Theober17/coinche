@@ -79,14 +79,18 @@ if "valider_tour" not in st.session_state:
 
 # Création de fonction de fonctionnement
 def filtrer_et_supprimer_doublons(liste):
+
     # Étape 1 : Compter les occurrences des valeurs
     compte = {}
     for valeur in liste:
-        if valeur in compte:
-            compte[valeur] += 1
-        else:
-            compte[valeur] = 1
-    
+        if (valeur < 20) and (valeur > 7):
+            compte[valeur] = 2
+        else :
+            if valeur in compte:
+                compte[valeur] += 1
+            else:
+                compte[valeur] = 1
+            
     # Étape 2 : Garder les valeurs qui apparaissent au moins deux fois
     valeurs_repeetees = {valeur for valeur, c in compte.items() if c > 1}
     
