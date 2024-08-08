@@ -10,7 +10,7 @@ from time import sleep
 
 
 # Importation du modèle d'IA et création de variables de jeu
-model = YOLO("best_tarot.pt")
+model = YOLO("CNN_Tarot_L.pt")
 
 cartes_coinche = {
     0: "9_Pique",
