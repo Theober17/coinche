@@ -283,7 +283,7 @@ with formulaire_pli:
         liste_cartes, result_image = detection_cartes(Image.open(uploaded_file))
         
         cartes_pli = st.multiselect(
-        "Carte détéctées :",
+        "Cartes détéctées :",
         ["9_Pique", "9_Trefle", "9_Coeur", "9_Carreau", "10_Pique", "10_Trefle", "10_Coeur", "10_Carreau", "Valet_Pique", "Valet_Trefle", "Valet_Coeur", "Valet_Carreau", "Dame_Pique", "Dame_Trefle", "Dame_Coeur", "Dame_Carreau", "Roi_Pique", "Roi_Trefle", "Roi_Coeur", "Roi_Carreau", "As_Pique", "As_Trefle", "As_Coeur", "As_Carreau"],
         liste_cartes
         )
