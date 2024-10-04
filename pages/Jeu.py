@@ -4,7 +4,7 @@ import streamlit as st
 import io
 import pandas as pd
 import numpy as np
-import cv2
+from opencv-python import cv2
 import torch
 from time import sleep
 
